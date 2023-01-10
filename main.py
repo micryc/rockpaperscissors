@@ -1,25 +1,31 @@
 import random
 
 choice = ("rock", "paper", "scissors")
+game = True
 
-player = None
-computer = random.choice(choice)
+while game:
 
-player = input("What's your choice? (rock, paper,scissors):")
+        player = None
+        computer = random.choice(choice)
 
-print(f"Player:{player}")
-print(f"Computer:{computer}")
+        player = input("What's your choice? (rock, paper,scissors):")
 
-if player == computer:
-        print("It's a tie !")
-elif player == "rock" and computer == "scissors":
-        print("You win !")
-elif player == "paper" and computer == "rock":
-        print("You win !")
-elif player == "scissors" and computer == "paper":
-        print("You win !")
-else:
-        print("You lose !")
+        print(f"Player:{player}")
+        print(f"Computer:{computer}")
+
+        if player == computer:
+                print("It's a tie !")
+        elif player == "rock" and computer == "scissors":
+                print("You win !")
+        elif player == "paper" and computer == "rock":
+                print("You win !")
+        elif player == "scissors" and computer == "paper":
+                print("You win !")
+        else:
+                print("You lose !")
+
+        if not input("Play again? (y/n):").lower()== "y":
+                game = False
 
 print("Thank you for the game!")
 
