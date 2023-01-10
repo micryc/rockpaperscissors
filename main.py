@@ -21,4 +21,5 @@ elif player == "scissors" and computer == "paper":
 else:
         print("You lose !")
 
+print("Thank you for the game!")
 
